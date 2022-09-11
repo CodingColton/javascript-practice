@@ -8,3 +8,12 @@ addToListButton.addEventListener('click', function() {
     itemList.appendChild(paragraph);
     inputField.value = "";
 });
+
+document.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        let paragraph = document.createElement('p');
+        paragraph.innerHTML = inputField.value;
+        itemList.appendChild(paragraph);
+        inputField.value = "";
+    }
+});
